@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Amas Précision | Acceuil</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      html.ie-10 .ie-panel,
+      html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="css-loader">
+      <div
+        class="loader-inner line-scale d-flex align-items-center justify-content-center"
+      ></div>
+    </div>
+    <header>
+      <nav class="navbar navbar-expand-lg" aria-label="Twelfth navbar example">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler bg-light bg-opacity-10 border border-danger"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsExample10"
+            aria-controls="navbarsExample10"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-md-center"
+            id="navbarsExample10"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Acceuil</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Formations</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="formation1.html"
+                      >Formation de base en statistique</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="formation2.html"
+                      >Formation sur les outils et logiciels spécialisés
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="formation3.html"
+                      >Formation en méthodologie de recherche</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"></li>
+              <li class="nav-item">
+                <a class="nav-link" href="venteLogiciels.html"> Logiciels</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Études</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="etudesStatistiques.html"
+                      >Statistique</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="etudesEconomiques.html"
+                      >Économique</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="developpementEntreprise.html"
+                      >Développement des entreprises</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nousContacter.html">Nous contacter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="logo-container">
+        <a class="navbar-brand" href="/index.html"
+          ><img src="../assets/images/logo.png" alt="Multipurpose"
+        /></a>
+        <p class="text-dark my-auto">
+          Bienvenue sur le site de Precision Amas. Excellence et précision au
+          service de vos besoins.
+        </p>
+      </div>
+    </header>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Nous Contacter</h1>
+          <p class="lead text-muted">
+            Découvrez comment nous pouvons vous aider à atteindre vos objectifs
+            en nous contactant dès aujourd'hui.
+          </p>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main wrapper for the calendar application -->
+    <div class="wrapper">
+      <div class="container-calendar">
+        <div id="left">
+          <h1>Prendre un rendez-vous</h1>
+          <div id="event-section">
+            <h3>Ajouter une date</h3>
+            <input type="text" id="name" placeholder="Votre Nom" />
+            <!-- <input type="number" id="number" placeholder="+229 57 35 09 51"> -->
+            <input type="date" id="eventDate" />
+            <input
+              type="text"
+              id="eventTitle"
+              placeholder="Sujet de Votre Rendez-vous"
+            />
+            <input
+              type="text"
+              id="eventDescription"
+              placeholder="Description"
+            />
+            <br />
+            <button id="addEvent" onclick="addEvent()">Envoyer</button>
+            <button id="addEvent" onclick="sendEmail()">
+              Envoyer par e-mail
+            </button>
+          </div>
+        </div>
+        <div id="right">
+          <h3 id="monthAndYear"></h3>
+          <div class="button-container-calendar">
+            <button id="previous" onclick="previous()">‹</button>
+            <button id="next" onclick="next()">›</button>
+          </div>
+          <table class="table-calendar" id="calendar" data-lang="en">
+            <thead id="thead-month"></thead>
+            <!-- Table body for displaying the calendar -->
+            <tbody id="calendar-body"></tbody>
+          </table>
+          <div class="footer-container-calendar">
+            <label for="month">Jusqu'à: </label>
+            <!-- Dropdowns to select a specific month and year -->
+            <select id="month" onchange="jump()">
+              <option value="0">Jan</option>
+              <option value="1">Feb</option>
+              <option value="2">Mar</option>
+              <option value="3">Apr</option>
+              <option value="4">May</option>
+              <option value="5">Jun</option>
+              <option value="6">Jul</option>
+              <option value="7">Aug</option>
+              <option value="8">Sep</option>
+              <option value="9">Oct</option>
+              <option value="10">Nov</option>
+              <option value="11">Dec</option>
+            </select>
+            <!-- Dropdown to select a specific year -->
+            <select id="year" onchange="jump()"></select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="section footer-classic">
+      <div class="footer-inner-1">
+        <div class="container">
+          <div class="row row-40">
+            <div class="col-md-5 col-lg-3">
+              <h5>Nos Contacts</h5>
+              <ul class="contact-list font-weight-bold">
+                <li>
+                  <div class="unit unit-spacing-xs">
+                    <div class="unit-left">
+                      <div
+                        class="icon icon-sm icon-primary novi-icon mdi mdi-map-marker"
+                      ></div>
+                    </div>
+                    <div class="unit-body">
+                      <a href="#"
+                        >N° DE PARCELLE lLot 254 <br />MAISON AMOUR GBAGUIDI
+                        AMOUSSOU, <br />Dangbo-Honmè, <br />Dangbo, Ouémé,
+                        <br />Cotonou, Bénin</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit unit-spacing-xs">
+                    <div class="unit-left">
+                      <div
+                        class="icon icon-sm icon-primary novi-icon mdi mdi-phone"
+                      ></div>
+                    </div>
+                    <div class="unit-body">
+                      <a href="tel:+22957350951"
+                        >+229 57 35 09 51 / +229 63 70 13 96</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit unit-spacing-xs">
+                    <div class="unit-left">
+                      <div
+                        class="icon icon-sm icon-primary novi-icon mdi mdi-clock"
+                      ></div>
+                    </div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li>Du lundi au vendredi : 8h00 – 17h00</li>
+                        <li>Week-ends : Fermé</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <a
+                class="d-inline-block big"
+                href="mailto:amasprecision@gmail.com"
+                >amasprecision@gmail.com</a
+              >
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <h5>Liens</h5>
+              <div class="row row-5 justify-content-between">
+                <div class="col-sm-6">
+                  <ul class="footer-list big">
+                    <li>
+                      <a href="https://www.impots.gouv.bj" target="_blank"
+                        >Publications fiscales (Bénin)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.cen-sa.org" target="_blank"
+                        >Centre des Impôts du Bénin</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.bceao.int" target="_blank"
+                        >Banque Centrale des Etats de l'Afrique de l'Ouest
+                        (BCEAO)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.dgi.bj" target="_blank"
+                        >Direction Générale des Impôts du Bénin</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.ouemegov.bj" target="_blank"
+                        >Ouémé - Informations économiques</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.afdb.org/en" target="_blank"
+                        >Banque Africaine de Développement - Financement et
+                        Investissement</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.investinbenin.com" target="_blank"
+                        >Investir au Bénin</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4 col-lg-6 col-xxl-5">
+                  <ul class="footer-list big">
+                    <li>
+                      <a href="https://www.cnb-bj.org" target="_blank"
+                        >Commission Nationale des Marchés de l’Investissement
+                        (CNB)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.cotonchad.com" target="_blank"
+                        >CotonChad - Agriculture et Investissement</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.banqueatlantique.net" target="_blank"
+                        >Banque Atlantique - Services financiers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.benincoton.org" target="_blank"
+                        >Bénin Coton - Secteur Agricole et Investissement</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.fisc.bj" target="_blank"
+                        >Système fiscal et impôts du Bénin</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com" target="_blank"
+                        >LinkedIn - Professionnels de la finance</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.investisseur.com" target="_blank"
+                        >Ressources pour investisseurs</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+              <h5>Nos Partenaires</h5>
+              <div class="row row-30 align-items-center text-center">
+                <div class="col-6 col-md-4 col-lg-6">
+                  <a class="link-image" href="#"
+                    ><img
+                      src="images/partenaire1.png"
+                      alt=""
+                      width="144"
+                      height="35"
+                  /></a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <a class="link-image" href="#"
+                    ><img
+                      src="images/partenaire2.jpg"
+                      alt=""
+                      width="121"
+                      height="34"
+                  /></a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <a class="link-image" href="#"
+                    ><img
+                      src="images/partenaire3.png"
+                      alt=""
+                      width="121"
+                      height="16"
+                  /></a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <a class="link-image" href="#"
+                    ><img
+                      src="images/partenaire4.png"
+                      alt=""
+                      width="101"
+                      height="38"
+                  /></a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <a class="link-image" href="#"
+                    ><img
+                      src="images/partenaire5.png"
+                      alt=""
+                      width="107"
+                      height="26"
+                  /></a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <a class="link-image" href="#"
+                    ><img
+                      src="images/partenaire7.png"
+                      alt=""
+                      width="97"
+                      height="26"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-inner-2">
+        <div class="container">
+          <p class="rights">
+            <span>&copy;&nbsp;</span><span class="copyright-year">2024</span>.
+            Tous droits réservés. Conçu par
+            <a href="/">Amas Précision</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="../js/core.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
